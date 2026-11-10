@@ -4,7 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sb4ssman</title>
-<meta name="description" content="sb4ssman: startup operations and applied AI. Ventures, AI and ML work, automation tools and Windows taskbar mods.">
+<meta name="description" content="Startup operations and applied AI: ventures, AI and ML systems, PC automation and desktop tools, with the story behind each project.">
+<link rel="canonical" href="https://sb4ssman.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="sb4ssman">
+<meta property="og:title" content="sb4ssman: Startup operations + applied AI">
+<meta property="og:description" content="Startup operations and applied AI: ventures, AI and ML systems, PC automation and desktop tools, with the story behind each project.">
+<meta property="og:url" content="https://sb4ssman.github.io/">
+<meta property="og:image" content="https://sb4ssman.github.io/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="sb4ssman: Startup operations + applied AI">
+<meta name="twitter:card" content="summary_large_image">
 
 <style id="paint-sb4ssport" media="not all">@font-face {
   font-family: "Space Grotesk"; font-style: normal; font-display: swap; font-weight: 300 700;
@@ -462,7 +475,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   .hero h1 { margin: 0; font-size: clamp(2.4rem, 7.5vw, 4.3rem); line-height: 1; letter-spacing: 0.06em; }
   .tagline { margin: 12px 0 18px; font-size: 0.95rem; }
   .hero p { margin: 0 0 14px; max-width: 62ch; }
-  pre.ascii { margin: 0; padding: 0; font-size: 0.78rem; overflow-x: auto; }
+  pre.ascii { margin: 0; padding: 0; font-size: 0.78rem; overflow-x: auto; font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }
   html pre.ascii { background: transparent !important; border: 0 !important; box-shadow: none !important; }
   .hero { align-items: center; }
   .hero pre.ascii { justify-self: center; }
@@ -695,7 +708,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <div class="face">
 <h3 class="name"><span data-themed="Mount Diablo Advisors" data-plain="Mount Diablo Advisors">Mount Diablo Advisors</span><span class="badges"><span class="st op">Closed</span></span></h3>
 <p class="sub">Started to do handshake private-equity deals when a partner&#x27;s PE firm passed on them.</p>
-<dl class="facts"><dt>Role</dt><dd>Co-founder, 2011. Formed the company, and later closed it down and filed its taxes.</dd><dt>Built</dt><dd>The firm over one summer. Since then, a personal finance tool behind it: account aggregation, net worth, and a review of my options positions with an AI that works from a structured knowledge library.</dd><dt>Details</dt><dd>The advisory side stopped after that summer. The finance tool has most of its backend; the live brokerage connection and its security work come next.</dd></dl>
+<dl class="facts"><dt>Role</dt><dd>Co-founder, 2011. Formed the company, and later closed it down and filed its taxes.</dd><dt>Built</dt><dd>A basic website over one summer, more than the splash page there now. Since then, a personal finance tool behind it: account aggregation, net worth, and a review of my options positions with an AI that works from a structured knowledge library.</dd><dt>Details</dt><dd>The advisory side stopped after that summer. The finance tool has most of its backend; the live brokerage connection and its security work come next.</dd></dl>
 <p class="links"><a class="story-toggle" href="posts/mount-diablo-advisors.html">Read the story</a></p>
 </div>
 <div class="story" hidden>
@@ -974,13 +987,13 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <div class="face">
 <h3 class="name"><a class="title-link" href="https://github.com/sb4ssman/SKsSuperSlickandStealthySaveSaver"><span data-themed="SK&#x27;s Super Slick and Stealthy Save Saver" data-plain="Subnautica save backup">SK&#x27;s Super Slick and Stealthy Save Saver</span></a></h3>
 <p class="sub">Backs up every Subnautica save automatically, because the game could freeze, corrupt its only save file, and force a new game.</p>
-<dl class="facts"><dt>Built</dt><dd>A tray app running a small watchdog: when the save changes, it copies it with a timestamp into a folder you choose, and a window restores any copy. One of the first programs I wrote for someone else: I asked my sister for a problem, and she had a real one.</dd><dt>Stack</dt><dd>Python</dd><dt>Details</dt><dd>Written while I was still teaching myself Python with the earliest LLMs.</dd></dl>
+<dl class="facts"><dt>Built</dt><dd>A tray app running a small watchdog: when the save changes, it copies it with a timestamp into a folder you choose, and a GUI window lets you restore any copy. One of the first programs I wrote for someone else: I asked my sister for a problem, and she had a real one.</dd><dt>Stack</dt><dd>Python</dd><dt>Details</dt><dd>Written while I was still teaching myself Python with the earliest LLMs.</dd></dl>
 <p class="links"><a class="story-toggle" href="posts/save-saver.html">Read the story</a> <a href="https://github.com/sb4ssman/SKsSuperSlickandStealthySaveSaver">Source on GitHub</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">SK&#x27;s Super Slick and Stealthy Save Saver: my first program for someone else</h3>
 <p><strong>The problem.</strong> Subnautica had a bug: at a certain point in the game it could freeze catastrophically and corrupt your save. The game overwrote a single save file, so if that file was corrupted, that was it. You started a new game.</p>
-<p><strong>What I built.</strong> I was still teaching myself Python, with the earliest LLMs, and I asked for a problem to solve. My sister had a real one. So I wrote a tray app that runs a simple watchdog. It watches the save folder, and whenever the save changes, it copies the file, adds a timestamp, and keeps the copy in a folder you choose. From the tray you can open a window and restore any copy. I typed a large part of the code myself.</p>
+<p><strong>What I built.</strong> I was still teaching myself Python, with the earliest LLMs, and I asked for a problem to solve. My sister had a real one. So I wrote a tray app that runs a simple watchdog. It watches the save folder, and whenever the save changes, it copies the file, adds a timestamp, and keeps the copy in a folder you choose. From the tray, a GUI window lets you restore any copy. I typed a large part of the code myself.</p>
 <p><strong>What happened.</strong> It worked, and it&#x27;s public: it backs up saves for Subnautica and Subnautica: Below Zero.</p>
 <p><strong>What I learned.</strong> It was one of the first programs I wrote for someone else. Asking for someone else&#x27;s problem is a good way to find a real one to solve.</p>
 <p class="links"><a class="story-toggle" href="#skssuperslickandstealthysavesaver">Back to the card</a> <a href="posts/save-saver.html">Open as its own page</a></p>
