@@ -389,6 +389,8 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   .post p, .post li { line-height: 1.65; }
   .post-kicker { margin: 0 0 8px; font-size: 0.9rem; }
   .post-list { line-height: 1.9; padding-left: 1.4em; }
+  .shot { margin: 18px 0; } .shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
+  .shot figcaption { margin-top: 6px; font-size: 0.85rem; color: var(--muted); }
   .post-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; margin: 22px 0 8px; }
   .post-back { margin: 12px 0 0; }
   footer { margin-top: 32px; padding: 26px 0 56px; font-size: 0.9rem; }
@@ -417,18 +419,10 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h1>True Bots</h1>
 <p><strong>The problem.</strong> Game bots are scripted. Players learn the script, and the bot stops being interesting. We set out to replace scripted bots with ML agents that play at human level and can be trained piece by piece.</p>
 <p><strong>What I built.</strong> We were a core team of three. I was co-founder and COO: fundraising, investor relations, decks, projections, studio partnerships, and the company&#x27;s admin, taxes and filings.</p>
-<p>I also wrote the tools the work ran on. Training Studio was the desktop control panel our ML engineers trained on, 21,000 lines that I hand-rolled piece by piece:</p>
-<ul>
-<li>a live, interactive interface for the YAML training configs;</li>
-<li>a script that extracted the validation rules from ML-Agents itself, so they followed new versions instead of drifting;</li>
-<li>a validator that checked the training environment against them;</li>
-<li>an environment builder that built the right environment when one wasn&#x27;t there.</li>
-</ul>
-<p>Training Studio covered real-time agents. For turn-based games I built the LLM Bridge: a Python tool and a C# Unity plugin that open a channel to a local or frontier model and relay game state and moves back and forth.</p>
+<p>I also wrote the two tools the work ran on: Training Studio, which our ML engineers trained real-time agents with, and the LLM Bridge, which let language models play turn-based games. Each has its own story.</p>
 <p><strong>What happened.</strong> We shipped six public demos and signed two studio partnerships. We were selected for La Guilde du jeu vidéo du Québec&#x27;s Parcours Innovation cohort (CAD $4,000 and an OVHcloud infrastructure partnership) and for Founder University Cohort 10. The company dissolved in February 2026; my co-founder and I are still on the project.</p>
-<p><strong>What I learned.</strong> Build for the automation you can see coming. I gave Training Studio command-line and API entry points from the start, because we expected LLMs and agents to drive training before that was a common thing.</p>
 </article>
-<nav class="post-nav" aria-label="More posts"><a href="capital-market-event.html">Previous: Capital Market Event: hats for milestones</a> <a href="windhawk.html">Next: Windhawk taskbar mods: Task Manager, always right there</a></nav>
+<nav class="post-nav" aria-label="More posts"><a href="capital-market-event.html">Previous: Capital Market Event: hats for milestones</a> <a href="training-studio.html">Next: Training Studio: the control panel True Bots trained on</a></nav>
 <p class="post-back"><a href="../#true-bots">Back to the card</a></p>
 
 <footer>
