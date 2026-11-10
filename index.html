@@ -574,6 +574,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   .card .links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: auto 0 0; padding-top: 6px; }
   /* A card with a post: the face and the story share the card; a tap fades between them. */
   .card[data-story] { cursor: pointer; }
+  .card .face .links .story-toggle { margin-left: auto; }   /* "About" sits right; the primary link stays left */
   .card > .face, .card > .story { display: flex; flex-direction: column; gap: 8px; flex: 1; transition: opacity 0.2s ease; }
   .card.fading > .face, .card.fading > .story { opacity: 0; }
   .card .story p { margin: 0; line-height: 1.6; }
@@ -669,7 +670,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><a class="title-link" href="https://true-bots.com/"><span data-themed="True Bots" data-plain="True Bots">True Bots</span></a><span class="badges"><span class="st op">Part-time</span></span></h3>
 <p class="sub">Co-founded startup replacing scripted game bots with modularly trainable ML agents that play at human level.</p>
 <dl class="facts"><dt>Role</dt><dd>Co-founder &amp; COO, Aug 2024 to present. Ran business operations: fundraising, investor relations, pitch decks, projections and studio partnerships; de facto CFO for the company&#x27;s admin, taxes and filings.</dd><dt>Built</dt><dd>Six public demos and two signed studio partnerships, as a core team of three. I wrote the internal platform our ML engineers trained on (Training Studio, below).</dd><dt>Details</dt><dd>Selected for La Guilde du jeu vidéo du Québec&#x27;s Parcours Innovation cohort (CAD $4,000 and an OVHcloud infrastructure partnership) and Founder University Cohort 10. The Delaware C-corp dissolved in Feb 2026; my co-founder and I remain casually active on the project.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/true-bots.html">Read the story</a> <a href="https://true-bots.com/">true-bots.com</a></p>
+<p class="links"><a href="https://true-bots.com/">true-bots.com</a> <a class="story-toggle" href="posts/true-bots.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">True Bots</h3>
@@ -693,7 +694,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><a class="title-link" href="https://1timeline.org/"><span data-themed="1Timeline" data-plain="1Timeline">1Timeline</span></a><span class="badges"><span class="st op">Paused</span></span></h3>
 <p class="sub">One timeline on which to place anything that has a timestamp.</p>
 <dl class="facts"><dt>Role</dt><dd>Founder.</dd><dt>Built</dt><dd>A Python prototype: Wikidata and Wikipedia scrapers, a timestamp extractor, an engine that links events by time, place and layer, and a 3D timeline view; 26 tests pass. Before that, a business plan and a proof-of-concept browser extension I commissioned from an outside development firm.</dd><dt>Stack</dt><dd>Python, Three.js</dd><dt>Details</dt><dd>I was looking for co-founders for it when I met the True Bots founders and joined them.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/1timeline.html">Read the story</a> <a href="https://1timeline.org/">1timeline.org</a></p>
+<p class="links"><a href="https://1timeline.org/">1timeline.org</a> <a class="story-toggle" href="posts/1timeline.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">1Timeline: the timeline that should exist</h3>
@@ -709,7 +710,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="Mount Diablo Advisors" data-plain="Mount Diablo Advisors">Mount Diablo Advisors</span><span class="badges"><span class="st op">Closed</span></span></h3>
 <p class="sub">Started to do handshake private-equity deals when a partner&#x27;s PE firm passed on them.</p>
 <dl class="facts"><dt>Role</dt><dd>Co-founder, 2011. Formed the company, and later closed it down and filed its taxes.</dd><dt>Built</dt><dd>A basic website over one summer, more than the splash page there now. Since then, a personal finance tool behind it: account aggregation, net worth, and a review of my options positions with an AI that works from a structured knowledge library.</dd><dt>Details</dt><dd>The advisory side stopped after that summer. The finance tool has most of its backend; the live brokerage connection and its security work come next.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/mount-diablo-advisors.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/mount-diablo-advisors.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Mount Diablo Advisors</h3>
@@ -725,7 +726,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><a class="title-link" href="https://capitalmarketevent.com/"><span data-themed="Capital Market Event" data-plain="Capital Market Event">Capital Market Event</span></a><span class="badges"><span class="st op">Paused</span></span></h3>
 <p class="sub">An online store that creates its own new products with AI and sells them through a print-on-demand partner.</p>
 <dl class="facts"><dt>Role</dt><dd>Owner and builder; a solo side project.</dd><dt>Built</dt><dd>The storefront site and much of the product workflow. An earlier, manual store on Zazzle sold a few Dow 100,000 hats.</dd><dt>Details</dt><dd>The store API connection and the automation are not wired up yet.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/capital-market-event.html">Read the story</a> <a href="https://capitalmarketevent.com/">capitalmarketevent.com</a></p>
+<p class="links"><a href="https://capitalmarketevent.com/">capitalmarketevent.com</a> <a class="story-toggle" href="posts/capital-market-event.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Capital Market Event: hats for milestones</h3>
@@ -746,7 +747,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="FlowNode AI subsystem" data-plain="FlowNode AI subsystem">FlowNode AI subsystem</span></h3>
 <p class="sub">The LLM layer of an aerospace thermal-analysis product, built with my longtime business and engineering partner.</p>
 <dl class="facts"><dt>Built</dt><dd>Provider adapters, VRAM-aware model selection and context budgeting. A validate-and-refine loop constrains stochastic output with deterministic checks, so weaker local models converge on correct answers over more iterations. A test harness of about 25 tests graded on physical invariants, not exact values.</dd><dt>Stack</dt><dd>TypeScript</dd><dt>Details</dt><dd>2026 to present.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/flownode.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/flownode.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">FlowNode: guesses are cheap, checks are cheaper</h3>
@@ -763,7 +764,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="Training Studio" data-plain="Training Studio">Training Studio</span></h3>
 <p class="sub">The desktop control panel True Bots&#x27; ML engineers ran their training on.</p>
 <dl class="facts"><dt>Built</dt><dd>Sole author, 21,000 lines: live YAML config interface, environment builder, four-category machine validation, run launch and live monitoring. The config validation schema is derived from the upstream source by AST parsing, so it follows new versions instead of drifting. Designed for an agent to drive the training loop later.</dd><dt>Stack</dt><dd>Python, Unity ML-Agents</dd><dt>Details</dt><dd>2024 to 2025; used by a team of three.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/true-bots.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/true-bots.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">True Bots</h3>
@@ -787,7 +788,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="LLM Bridge" data-plain="LLM Bridge">LLM Bridge</span></h3>
 <p class="sub">Lets a language model, local or frontier, play turn-based games inside a game engine.</p>
 <dl class="facts"><dt>Built</dt><dd>A Python tool and a C# Unity plugin, with other editors supported through modules. It opens a channel to the model and relays game state and moves back and forth. At True Bots, Training Studio trained the real-time agents; the Bridge covered turn-based games.</dd><dt>Stack</dt><dd>Python, C#, Unity</dd><dt>Details</dt><dd>Built at True Bots.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/true-bots.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/true-bots.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">True Bots</h3>
@@ -816,7 +817,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><a class="title-link" href="https://github.com/sb4ssman/gitSpecOps"><span data-themed="gitSpecOps" data-plain="gitSpecOps">gitSpecOps</span></a></h3>
 <p class="sub">Careful, boring, stdlib-only tools for when you have far too many Git repositories and doing it by hand has stopped being reasonable.</p>
 <dl class="facts"><dt>Built</dt><dd>One launcher over single-purpose Git operations. Each shows a plan before it acts, refuses anything ambiguous and never touches credentials. Built-in security scans, with optional engines such as gitleaks and trufflehog; publishing checks the exact outgoing history and holds the push on a finding.</dd><dt>Stack</dt><dd>Python, standard library only</dd><dt>Details</dt><dd>In progress: the Windows command-line tools work; the GUI, Linux and macOS, and testing across a real fleet are unfinished.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/gitspecops.html">Read the story</a> <a href="https://github.com/sb4ssman/gitSpecOps">Source on GitHub</a></p>
+<p class="links"><a href="https://github.com/sb4ssman/gitSpecOps">Source on GitHub</a> <a class="story-toggle" href="posts/gitspecops.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">gitSpecOps: special Git operations</h3>
@@ -832,7 +833,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><a class="title-link" href="https://github.com/sb4ssman/oci-free-cloud-lab-starter"><span data-themed="Oracle Free Cloud Lab Starter" data-plain="Oracle Free Cloud Lab Starter">Oracle Free Cloud Lab Starter</span></a></h3>
 <p class="sub">Fork it, fill in a .env, run one script, and watch three Oracle Cloud VMs build themselves from an admin dashboard that comes up automatically on the management VM.</p>
 <dl class="facts"><dt>Built</dt><dd>A management VM boots first and takes over: it provisions a worker VM, then keeps requesting Oracle&#x27;s scarce free A1 Flex machine until capacity opens, and keeps the lab running and self-healing afterward.</dd><dt>Stack</dt><dd>Shell, Python, cloud-init, OCI CLI</dd><dt>Details</dt><dd>Public; runs on the free tier.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/oracle-cloud-lab.html">Read the story</a> <a href="https://github.com/sb4ssman/oci-free-cloud-lab-starter">Source on GitHub</a></p>
+<p class="links"><a href="https://github.com/sb4ssman/oci-free-cloud-lab-starter">Source on GitHub</a> <a class="story-toggle" href="posts/oracle-cloud-lab.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Oracle Free Cloud Lab Starter: claim the compute, keep it</h3>
@@ -848,7 +849,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="Ground Support" data-plain="Ground Support">Ground Support</span><span class="badges"><span class="st op">coming soon</span></span></h3>
 <p class="sub">Captures what makes a machine yours, then rebuilds it from scratch by script.</p>
 <dl class="facts"><dt>Built</dt><dd>A read-only scan of software, settings, install locations and workarounds; the intended setup kept separately; ordered rebuild scripts that state every manual step instead of hiding it; and checks that prove the rebuild worked.</dd><dt>Stack</dt><dd>PowerShell</dd><dt>Details</dt><dd>Built when my laptop was dying. Windows first; its own checks pass, and a full capture and rebuild waits for the next machine.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/ground-support.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/ground-support.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Ground Support: rebuild my machine by script</h3>
@@ -864,7 +865,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="DCG Taskforce" data-plain="DCG Taskforce">DCG Taskforce</span><span class="badges"><span class="st op">coming soon</span></span></h3>
 <p class="sub">Keeps a guard against destructive commands from AI coding agents installed, current and checked on Windows, Linux, macOS and WSL distributions, all at once.</p>
 <dl class="facts"><dt>Built</dt><dd>Scheduled maintenance around Dicklesworthstone&#x27;s Destructive Command Guard: updates come only through its signed releases, verified before install; integrations are repaired with its own commands; and the last result and any alerts stay where you can see them.</dd><dt>Stack</dt><dd>PowerShell, Bash</dd><dt>Details</dt><dd>Built to step aside wherever the guard adds the same feature itself.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/dcg-taskforce.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/dcg-taskforce.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">DCG Taskforce: obsessively installing a guard</h3>
@@ -879,7 +880,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <div class="face">
 <h3 class="name"><span data-themed="Sb4ssport-Alpha" data-plain="Sb4ssport-Alpha">Sb4ssport-Alpha</span><span class="badges"><span class="st op">coming soon</span></span></h3>
 <p class="sub">The shelf for the reusable parts behind my projects: repository shapes and working rules for AI coding agents, the static-site builder and the themes this page uses, and maintenance for a destructive-command guard.</p>
-<p class="links"><a class="story-toggle" href="posts/sb4ssport-alpha.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/sb4ssport-alpha.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Sb4ssport-Alpha: a port for everything I build</h3>
@@ -900,7 +901,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="DesktopOpener" data-plain="DesktopOpener">DesktopOpener</span><span class="badges"><span class="st op">coming soon</span></span></h3>
 <p class="sub">One click to reopen every app and put each one back where it was.</p>
 <dl class="facts"><dt>Built</dt><dd>My first Python project: save and restore window positions, workspaces of apps, files and scripts, and scheduled launches. Every tool I needed along the way became part of it: a pixel ruler, ColorCatcher, FancySearch for my repos, the Environment Probe, my own console, and a tray control panel.</dd><dt>Stack</dt><dd>Python</dd><dt>Details</dt><dd>382 commits since Oct 2023. Windows works; Linux and macOS come next.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/desktopopener.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/desktopopener.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">DesktopOpener: tools to build up</h3>
@@ -917,7 +918,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><a class="title-link" href="https://github.com/sb4ssman/Windhawk-Mod-Lab"><span data-themed="Windhawk Mod Lab" data-plain="Windhawk Mod Lab">Windhawk Mod Lab</span></a></h3>
 <p class="sub">Seven taskbar productivity mods that densify information and expose controls Windows does not offer; all seven published in the public Windhawk catalog.</p>
 <dl class="facts"><dt>Built</dt><dd>A template library and verification scripts that mechanically enforce code parity across mods on a platform that forbids shared libraries, and a unit-tested layout language. Mods ship as DLLs injected into explorer.exe. A companion, Windhawk SatOps, captures every mod&#x27;s version and settings so a rebuilt machine gets back exactly the mods it had.</dd><dt>Stack</dt><dd>C++, Python, PowerShell</dd><dt>Details</dt><dd>All seven published in the public Windhawk catalog after maintainer review; more than 1,000 users.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/windhawk.html">Read the story</a> <a href="https://github.com/sb4ssman/Windhawk-Mod-Lab">Source on GitHub</a></p>
+<p class="links"><a href="https://github.com/sb4ssman/Windhawk-Mod-Lab">Source on GitHub</a> <a class="story-toggle" href="posts/windhawk.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Windhawk taskbar mods: Task Manager, always right there</h3>
@@ -933,7 +934,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="Orbital Workshop" data-plain="Orbital Workshop">Orbital Workshop</span><span class="badges"><span class="st op">coming soon</span></span></h3>
 <p class="sub">Where my small tools are made, and the one home of the tools every repo of mine shares.</p>
 <dl class="facts"><dt>Built</dt><dd>PowerCycler: a hotkey, a customizable tray app and on-screen notices for the computer&#x27;s power mode, filling in whatever the maker left out, and showing the mode that is really active. A key remapper (my Copilot key opens DesktopOpener). Hardware detection and sensor monitoring, the folder mapper agents run first, a personal-data audit, and the builder for this page.</dd><dt>Stack</dt><dd>Python, AutoHotkey, PowerShell</dd><dt>Details</dt><dd>PowerCycler is an early release with automated tests; the macOS app is in progress.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/orbital-workshop.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/orbital-workshop.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Orbital Workshop: power modes, one good key, and tools that save an AI&#x27;s time</h3>
@@ -956,7 +957,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="The Shapes" data-plain="The Shapes">The Shapes</span><span class="badges"><span class="st op">coming soon</span></span></h3>
 <p class="sub">Templates for how a repository, an organization and a household are laid out, so any AI agent pointed at one lands in the same role and finds the open work and the history.</p>
 <dl class="facts"><dt>Built</dt><dd>One protocol every shape carries (roles, notes and log, handoffs, tools, safety), step-by-step tasks for an agent to seed, adopt, check or retire a repo, and templates for a standalone repo, a subject repo, an org&#x27;s mission control, a plain project folder and personal arrangements. Every repo built from a shape records the commit it came from, so improvements flow out and back.</dd><dt>Stack</dt><dd>Markdown, Python tests</dd><dt>Details</dt><dd>In use across my repositories; this site&#x27;s source was built from one.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/the-shapes.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/the-shapes.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">The Shapes: repos that teach any agent how to work in them</h3>
@@ -972,7 +973,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="Extrasolar Livery" data-plain="Extrasolar Livery">Extrasolar Livery</span><span class="badges"><span class="st op">coming soon</span></span></h3>
 <p class="sub">The paint shop: themes a page can wear without changing its layout.</p>
 <dl class="facts"><dt>Built</dt><dd>Liveries written against a small, documented set of class names: the Spaceport look and the plain Light and Dark themes this page offers, animated backdrops of the sky, the Earth and the Moon, and self-hosted open fonts.</dd><dt>Stack</dt><dd>CSS, JavaScript</dd><dt>Details</dt><dd>This page wears it.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/extrasolar-livery.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/extrasolar-livery.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Extrasolar Livery: if I&#x27;m going to look at it, it should look good</h3>
@@ -988,7 +989,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><a class="title-link" href="https://github.com/sb4ssman/SKsSuperSlickandStealthySaveSaver"><span data-themed="SK&#x27;s Super Slick and Stealthy Save Saver" data-plain="Subnautica save backup">SK&#x27;s Super Slick and Stealthy Save Saver</span></a></h3>
 <p class="sub">Backs up every Subnautica save automatically, because the game could freeze, corrupt its only save file, and force a new game.</p>
 <dl class="facts"><dt>Built</dt><dd>A tray app running a small watchdog: when the save changes, it copies it with a timestamp into a folder you choose, and a GUI window lets you restore any copy. One of the first programs I wrote for someone else: I asked my sister for a problem, and she had a real one.</dd><dt>Stack</dt><dd>Python</dd><dt>Details</dt><dd>Written while I was still teaching myself Python with the earliest LLMs.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/save-saver.html">Read the story</a> <a href="https://github.com/sb4ssman/SKsSuperSlickandStealthySaveSaver">Source on GitHub</a></p>
+<p class="links"><a href="https://github.com/sb4ssman/SKsSuperSlickandStealthySaveSaver">Source on GitHub</a> <a class="story-toggle" href="posts/save-saver.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">SK&#x27;s Super Slick and Stealthy Save Saver: my first program for someone else</h3>
@@ -1004,7 +1005,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><a class="title-link" href="https://github.com/sb4ssman/tontec-mz61581-pi2"><span data-themed="Tontec MZ61581 on Raspberry Pi 2" data-plain="Tontec MZ61581 on Raspberry Pi 2">Tontec MZ61581 on Raspberry Pi 2</span></a></h3>
 <p class="sub">Makes the Tontec MZ61581 3.5-inch SPI touchscreen work on a Raspberry Pi 2 Model B with current Raspberry Pi OS.</p>
 <dl class="facts"><dt>Built</dt><dd>The recipe that finally made it work: wiring, the current display-driver setup, touch calibration and checks. The key find: this board&#x27;s backlight is active-low, so every stock driver switched it off while the panel was drawing frames.</dd><dt>Stack</dt><dd>Shell, Python</dd><dt>Details</dt><dd>The screen worked once, years ago, then sat abandoned. I pointed an AI agent at the Pi and let it troubleshoot; no other guide existed, so I published it. The screen now runs Moonbase.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/tontec.html">Read the story</a> <a href="https://github.com/sb4ssman/tontec-mz61581-pi2">Source on GitHub</a></p>
+<p class="links"><a href="https://github.com/sb4ssman/tontec-mz61581-pi2">Source on GitHub</a> <a class="story-toggle" href="posts/tontec.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">The Tontec screen: an AI agent finally fixed it</h3>
@@ -1020,7 +1021,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <h3 class="name"><span data-themed="Moonbase" data-plain="Moonbase">Moonbase</span><span class="badges"><span class="lock">private</span></span></h3>
 <p class="sub">Our own home terminal on a Raspberry Pi 2: one touchscreen and a red button for our mismatched smart-home devices.</p>
 <dl class="facts"><dt>Built</dt><dd>A hand-rolled pygame interface on the Tontec screen, built from a display contract so the same widgets draw into two frame layouts. Themes are closed color sets, and each system&#x27;s color is chosen by a fixed rank from living to machine, so lights stay the lights color in every theme. It runs our lights and the Roomba.</dd><dt>Stack</dt><dd>Python, pygame, Raspberry Pi OS</dd><dt>Details</dt><dd>A work in progress; some services are not connected yet. 76 commits since July 2026.</dd></dl>
-<p class="links"><a class="story-toggle" href="posts/moonbase.html">Read the story</a></p>
+<p class="links"><a class="story-toggle" href="posts/moonbase.html">About</a></p>
 </div>
 <div class="story" hidden>
 <h3 class="name">Moonbase: our own home terminal</h3>
