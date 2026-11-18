@@ -386,6 +386,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   main.post-wrap { max-width: 78ch; padding-top: 28px; padding-bottom: 24px; }
   .post { padding: 22px 24px; }
   .post h1 { margin: 0 0 16px; line-height: 1.15; }
+  .icon { width: 1.4em; height: 1.4em; object-fit: contain; vertical-align: -0.3em; margin-right: 0.4em; flex: none; align-self: center; }
   .post p, .post li { line-height: 1.65; }
   .post-kicker { margin: 0 0 8px; font-size: 0.9rem; }
   .post-list { line-height: 1.9; padding-left: 1.4em; }
@@ -416,7 +417,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <main class="wrap post-wrap">
 <article class="post box">
 <p class="post-kicker"><a href="./">Posts</a></p>
-<h1>LLM Bridge: letting a language model play the game</h1>
+<h1><img class="icon" src="../assets/icons/llm-bridge.svg" alt="" width="24" height="24" loading="lazy">LLM Bridge: letting a language model play the game</h1>
 <p><strong>The problem.</strong> A separate problem from Training Studio&#x27;s. Turn-based strategy games aren&#x27;t bound to real time, and they get more out of playing against more intelligent opponents: language models.</p>
 <p><strong>What I built.</strong> A bridge that uses plugins to work with game engines (Unity so far, with a C# plugin) and pipes structured data back and forth, with extra checks and considerations along the way. A Python tool opens the channel to a local or frontier model. You pick the provider and the model, choose the game and its rules, and the bridge turns the board into something the model can read, sends the model&#x27;s move back to the game, checks it against the legal moves, and logs every match.</p>
 <figure class="shot"><a href="../assets/screenshots/llm-bridge.webp"><img src="../assets/screenshots/llm-bridge.webp" alt="The LLM Bridge playing chess: the game in Unity, the bridge&#x27;s settings and live log beside it" loading="lazy"></a><figcaption>The LLM Bridge playing chess: the game in Unity, the bridge&#x27;s settings and live log beside it</figcaption></figure>

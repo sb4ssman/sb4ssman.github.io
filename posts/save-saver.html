@@ -386,6 +386,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   main.post-wrap { max-width: 78ch; padding-top: 28px; padding-bottom: 24px; }
   .post { padding: 22px 24px; }
   .post h1 { margin: 0 0 16px; line-height: 1.15; }
+  .icon { width: 1.4em; height: 1.4em; object-fit: contain; vertical-align: -0.3em; margin-right: 0.4em; flex: none; align-self: center; }
   .post p, .post li { line-height: 1.65; }
   .post-kicker { margin: 0 0 8px; font-size: 0.9rem; }
   .post-list { line-height: 1.9; padding-left: 1.4em; }
@@ -416,7 +417,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <main class="wrap post-wrap">
 <article class="post box">
 <p class="post-kicker"><a href="./">Posts</a></p>
-<h1>SK&#x27;s Super Slick and Stealthy Save Saver: my first program for someone else</h1>
+<h1><img class="icon" src="../assets/icons/save-saver.png" alt="" width="24" height="24" loading="lazy">SK&#x27;s Super Slick and Stealthy Save Saver: my first program for someone else</h1>
 <p><strong>The problem.</strong> Subnautica had a bug: at a certain point in the game it could freeze catastrophically and corrupt your save. The game overwrote a single save file, so if that file was corrupted, that was it. You started a new game.</p>
 <p><strong>What I built.</strong> I was still teaching myself Python, with the earliest LLMs, and I asked for a problem to solve. My sister had a real one. So I wrote a tray app that runs a simple watchdog. It watches the save folder, and whenever the save changes, it copies the file, adds a timestamp, and keeps the copy in a folder you choose. From the tray, a GUI window lets you restore any copy. I typed a large part of the code myself.</p>
 <p><strong>What happened.</strong> It worked, and it&#x27;s public: it backs up saves for Subnautica and Subnautica: Below Zero.</p>

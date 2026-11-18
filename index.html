@@ -502,6 +502,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   .node > summary { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: start; }
   .node > summary::after { grid-column: 2; grid-row: 1; }
   .node .name { font-size: 1.25rem; line-height: 1.2; }
+  .icon { width: 1.4em; height: 1.4em; object-fit: contain; vertical-align: -0.3em; margin-right: 0.4em; flex: none; align-self: center; }
   .node .badges, .tile .badges { display: inline-flex; flex-wrap: wrap; gap: 4px; margin-left: 6px; vertical-align: 2px; }
   .node .sub, .node .form, .node .whim, .node .rel { grid-column: 1 / -1; margin: 0; }
   .node .whim { font-size: 0.92rem; }
@@ -565,6 +566,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   /* Open cards: everything a reader needs is on the card; no inspector. */
   .card { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; }
   .card .name { margin: 0; font-size: 1.25rem; line-height: 1.2; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+  .card .name .icon { margin-right: 0; }
   .card .name .badges { margin-left: auto; display: inline-flex; flex-wrap: wrap; gap: 4px; font-size: 0.8rem; font-weight: 600; }
   .card .sub { margin: 0; }
   .card .facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; margin: 4px 0 0; font-size: 0.92rem; }
@@ -659,7 +661,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 
 
 <section id="shelf">
-  <h2><span data-themed="The shelf" data-plain="Projects">The shelf</span></h2>
+  <h2><a class="shelf-link" href="https://sb4ssport-alpha.github.io/"><span data-themed="The shelf" data-plain="Projects">The shelf</span></a></h2>
   <p class="lead">What I have built, what it did, and where each one stands.</p>
   <div class="key"></div>
 
@@ -669,13 +671,13 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <div class="boxes">
 <article class="thing box card kit" id="true-bots" data-thing data-rel="" data-story style="--c: var(--warm)">
 <div class="face">
-<h3 class="name"><a class="title-link" href="https://true-bots.com/"><span data-themed="True Bots" data-plain="True Bots">True Bots</span></a><span class="badges"><span class="st op">Part-time</span></span></h3>
+<h3 class="name"><img class="icon" src="assets/icons/true-bots.svg" alt="" width="24" height="24" loading="lazy"><a class="title-link" href="https://true-bots.com/"><span data-themed="True Bots" data-plain="True Bots">True Bots</span></a><span class="badges"><span class="st op">Part-time</span></span></h3>
 <p class="sub">Co-founded startup replacing scripted game bots with modularly trainable ML agents that play at human level.</p>
 <dl class="facts"><dt>Role</dt><dd>Co-founder &amp; COO, Aug 2024 to present. Ran business operations: fundraising, investor relations, pitch decks, projections and studio partnerships; de facto CFO for the company&#x27;s admin, taxes and filings.</dd><dt>Built</dt><dd>Six public demos and two signed studio partnerships, as a core team of three. I wrote the internal platform our ML engineers trained on (Training Studio, below).</dd><dt>Details</dt><dd>Selected for La Guilde du jeu vidéo du Québec&#x27;s Parcours Innovation cohort (CAD $4,000 and an OVHcloud infrastructure partnership) and Founder University Cohort 10. The Delaware C-corp dissolved in Feb 2026; my co-founder and I remain casually active on the project.</dd></dl>
 <p class="links"><a href="https://true-bots.com/">true-bots.com</a> <a class="story-toggle" href="posts/true-bots.html">About</a></p>
 </div>
 <div class="story" hidden>
-<h3 class="name">True Bots</h3>
+<h3 class="name"><img class="icon" src="assets/icons/true-bots.svg" alt="" width="24" height="24" loading="lazy">True Bots</h3>
 <p><strong>The problem.</strong> Game bots are scripted. Players learn the script, and the bot stops being interesting. We set out to replace scripted bots with ML agents that play at human level and can be trained piece by piece.</p>
 <p><strong>What I built.</strong> We were a core team of three. I was co-founder and COO: fundraising, investor relations, decks, projections, studio partnerships, and the company&#x27;s admin, taxes and filings.</p>
 <p>I also wrote the two tools the work ran on: Training Studio, which our ML engineers trained real-time agents with, and the LLM Bridge, which let language models play turn-based games. Each has its own story.</p>
@@ -779,13 +781,13 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 </article>
 <article class="thing box card kit" id="llm-bridge" data-thing data-rel="" data-story style="--c: var(--go)">
 <div class="face">
-<h3 class="name"><span data-themed="LLM Bridge" data-plain="LLM Bridge">LLM Bridge</span></h3>
+<h3 class="name"><img class="icon" src="assets/icons/llm-bridge.svg" alt="" width="24" height="24" loading="lazy"><span data-themed="LLM Bridge" data-plain="LLM Bridge">LLM Bridge</span></h3>
 <p class="sub">Lets a language model, local or frontier, play turn-based games inside a game engine.</p>
 <dl class="facts"><dt>Built</dt><dd>A Python tool and a C# Unity plugin, with other editors supported through modules. It opens a channel to the model and relays game state and moves back and forth. At True Bots, Training Studio trained the real-time agents; the Bridge covered turn-based games.</dd><dt>Stack</dt><dd>Python, C#, Unity</dd><dt>Details</dt><dd>Built at True Bots.</dd></dl>
 <p class="links"><a class="story-toggle" href="posts/llm-bridge.html">About</a></p>
 </div>
 <div class="story" hidden>
-<h3 class="name">LLM Bridge: letting a language model play the game</h3>
+<h3 class="name"><img class="icon" src="assets/icons/llm-bridge.svg" alt="" width="24" height="24" loading="lazy">LLM Bridge: letting a language model play the game</h3>
 <p><strong>The problem.</strong> A separate problem from Training Studio&#x27;s. Turn-based strategy games aren&#x27;t bound to real time, and they get more out of playing against more intelligent opponents: language models.</p>
 <p><strong>What I built.</strong> A bridge that uses plugins to work with game engines (Unity so far, with a C# plugin) and pipes structured data back and forth, with extra checks and considerations along the way. A Python tool opens the channel to a local or frontier model. You pick the provider and the model, choose the game and its rules, and the bridge turns the board into something the model can read, sends the model&#x27;s move back to the game, checks it against the legal moves, and logs every match.</p>
 <figure class="shot"><a href="assets/screenshots/llm-bridge.webp"><img src="assets/screenshots/llm-bridge.webp" alt="The LLM Bridge playing chess: the game in Unity, the bridge&#x27;s settings and live log beside it" loading="lazy"></a><figcaption>The LLM Bridge playing chess: the game in Unity, the bridge&#x27;s settings and live log beside it</figcaption></figure>
@@ -800,13 +802,13 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <div class="boxes">
 <article class="thing box card kit" id="gitspecops" data-thing data-rel="" data-story style="--c: var(--cyan)">
 <div class="face">
-<h3 class="name"><a class="title-link" href="https://github.com/sb4ssman/gitSpecOps"><span data-themed="gitSpecOps" data-plain="gitSpecOps">gitSpecOps</span></a></h3>
+<h3 class="name"><img class="icon" src="assets/icons/gitspecops.svg" alt="" width="24" height="24" loading="lazy"><a class="title-link" href="https://github.com/sb4ssman/gitSpecOps"><span data-themed="gitSpecOps" data-plain="gitSpecOps">gitSpecOps</span></a></h3>
 <p class="sub">Careful, boring, stdlib-only tools for when you have far too many Git repositories and doing it by hand has stopped being reasonable.</p>
 <dl class="facts"><dt>Built</dt><dd>One launcher over single-purpose Git operations. Each shows a plan before it acts, refuses anything ambiguous and never touches credentials. Built-in security scans, with optional engines such as gitleaks and trufflehog; publishing checks the exact outgoing history and holds the push on a finding.</dd><dt>Stack</dt><dd>Python, standard library only</dd><dt>Details</dt><dd>In progress: the Windows command-line tools work; the GUI, Linux and macOS, and testing across a real fleet are unfinished.</dd></dl>
 <p class="links"><a href="https://github.com/sb4ssman/gitSpecOps">Source on GitHub</a> <a class="story-toggle" href="posts/gitspecops.html">About</a></p>
 </div>
 <div class="story" hidden>
-<h3 class="name">gitSpecOps: special Git operations</h3>
+<h3 class="name"><img class="icon" src="assets/icons/gitspecops.svg" alt="" width="24" height="24" loading="lazy">gitSpecOps: special Git operations</h3>
 <p><strong>The problem.</strong> I had a reason to migrate a whole GitHub organization: 50 repositories into a new one. Nobody should do that by hand.</p>
 <p><strong>What I built.</strong> An organization duplicator: it pulled each repository to my machine, then pushed it to an identically named repository in the new organization. Then I added special operations one or two at a time. As my fleet of machines grew and I worked on projects across them, I wanted to see the sync state of every repository on every machine at once, so I built the sync suggester. Every operation shows its plan before it acts and refuses anything ambiguous.</p>
 <p><strong>Where it stands.</strong> The Windows command-line tools work. The GUI, Linux and macOS support, and testing across a real fleet are unfinished.</p>
@@ -885,13 +887,13 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <div class="boxes">
 <article class="thing box card kit" id="desktopopener" data-thing data-rel="" data-story style="--c: var(--pad)">
 <div class="face">
-<h3 class="name"><span data-themed="DesktopOpener" data-plain="DesktopOpener">DesktopOpener</span><span class="badges"><span class="st op">coming soon</span></span></h3>
+<h3 class="name"><img class="icon" src="assets/icons/desktopopener.png" alt="" width="24" height="24" loading="lazy"><span data-themed="DesktopOpener" data-plain="DesktopOpener">DesktopOpener</span><span class="badges"><span class="st op">coming soon</span></span></h3>
 <p class="sub">One click to reopen every app and put each one back where it was.</p>
 <dl class="facts"><dt>Built</dt><dd>My first Python project: save and restore window positions, workspaces of apps, files and scripts, and scheduled launches. Every tool I needed along the way became part of it: a pixel ruler, ColorCatcher, FancySearch for my repos, the Environment Probe, my own console, and a tray control panel.</dd><dt>Stack</dt><dd>Python</dd><dt>Details</dt><dd>382 commits since Oct 2023. Windows works; Linux and macOS come next.</dd></dl>
 <p class="links"><a class="story-toggle" href="posts/desktopopener.html">About</a></p>
 </div>
 <div class="story" hidden>
-<h3 class="name">DesktopOpener: tools to build up</h3>
+<h3 class="name"><img class="icon" src="assets/icons/desktopopener.png" alt="" width="24" height="24" loading="lazy">DesktopOpener: tools to build up</h3>
 <p><strong>The problem.</strong> I&#x27;ve been hooked on software since AOL, when I found out you could download new programs that did new things. And every time a computer crashed, I wanted one click that would reopen every app and put each one back exactly where I had it.</p>
 <p><strong>What I built.</strong> Programming had always been a hobby. I taught myself to program my graphing calculator from its manual, but applications on a PC were out of reach. When LLMs arrived, at the right moment in my life, I taught myself Python, and this was the first project: every piece I needed to take control of my desktop. Open apps, place them, do it again reliably, save the list, open several lists at once.</p>
 <p>Every time I hit something I couldn&#x27;t do, I built the tool for it, and each one became part of DesktopOpener. I needed to measure pixel distances on screen, so I built my own ruler. I needed a better color picker, so I built ColorCatcher. I wanted to search the text in my repos and gather stats on my own work, so I built FancySearch. I needed to know more about the desktop environment itself, so I built the Environment Probe. And I wanted a control panel with shortcuts to the tools I use most. I got fascinated by Python&#x27;s live console, built my own, and started on a way to multiplex running scripts. The background workers I imagined never arrived, but many of the apps now run quietly from the system tray.</p>
@@ -973,13 +975,13 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 </article>
 <article class="thing box card kit" id="skssuperslickandstealthysavesaver" data-thing data-rel="" data-story style="--c: var(--cyan)">
 <div class="face">
-<h3 class="name"><a class="title-link" href="https://github.com/sb4ssman/SKsSuperSlickandStealthySaveSaver"><span data-themed="SK&#x27;s Super Slick and Stealthy Save Saver" data-plain="Subnautica save backup">SK&#x27;s Super Slick and Stealthy Save Saver</span></a></h3>
+<h3 class="name"><img class="icon" src="assets/icons/save-saver.png" alt="" width="24" height="24" loading="lazy"><a class="title-link" href="https://github.com/sb4ssman/SKsSuperSlickandStealthySaveSaver"><span data-themed="SK&#x27;s Super Slick and Stealthy Save Saver" data-plain="Subnautica save backup">SK&#x27;s Super Slick and Stealthy Save Saver</span></a></h3>
 <p class="sub">Backs up every Subnautica save automatically, because the game could freeze, corrupt its only save file, and force a new game.</p>
 <dl class="facts"><dt>Built</dt><dd>A tray app running a small watchdog: when the save changes, it copies it with a timestamp into a folder you choose, and a GUI window lets you restore any copy. One of the first programs I wrote for someone else: I asked my sister for a problem, and she had a real one.</dd><dt>Stack</dt><dd>Python</dd><dt>Details</dt><dd>Written while I was still teaching myself Python with the earliest LLMs.</dd></dl>
 <p class="links"><a href="https://github.com/sb4ssman/SKsSuperSlickandStealthySaveSaver">Source on GitHub</a> <a class="story-toggle" href="posts/save-saver.html">About</a></p>
 </div>
 <div class="story" hidden>
-<h3 class="name">SK&#x27;s Super Slick and Stealthy Save Saver: my first program for someone else</h3>
+<h3 class="name"><img class="icon" src="assets/icons/save-saver.png" alt="" width="24" height="24" loading="lazy">SK&#x27;s Super Slick and Stealthy Save Saver: my first program for someone else</h3>
 <p><strong>The problem.</strong> Subnautica had a bug: at a certain point in the game it could freeze catastrophically and corrupt your save. The game overwrote a single save file, so if that file was corrupted, that was it. You started a new game.</p>
 <p><strong>What I built.</strong> I was still teaching myself Python, with the earliest LLMs, and I asked for a problem to solve. My sister had a real one. So I wrote a tray app that runs a simple watchdog. It watches the save folder, and whenever the save changes, it copies the file, adds a timestamp, and keeps the copy in a folder you choose. From the tray, a GUI window lets you restore any copy. I typed a large part of the code myself.</p>
 <p><strong>What happened.</strong> It worked, and it&#x27;s public: it backs up saves for Subnautica and Subnautica: Below Zero.</p>

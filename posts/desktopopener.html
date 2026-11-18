@@ -386,6 +386,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   main.post-wrap { max-width: 78ch; padding-top: 28px; padding-bottom: 24px; }
   .post { padding: 22px 24px; }
   .post h1 { margin: 0 0 16px; line-height: 1.15; }
+  .icon { width: 1.4em; height: 1.4em; object-fit: contain; vertical-align: -0.3em; margin-right: 0.4em; flex: none; align-self: center; }
   .post p, .post li { line-height: 1.65; }
   .post-kicker { margin: 0 0 8px; font-size: 0.9rem; }
   .post-list { line-height: 1.9; padding-left: 1.4em; }
@@ -416,7 +417,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <main class="wrap post-wrap">
 <article class="post box">
 <p class="post-kicker"><a href="./">Posts</a></p>
-<h1>DesktopOpener: tools to build up</h1>
+<h1><img class="icon" src="../assets/icons/desktopopener.png" alt="" width="24" height="24" loading="lazy">DesktopOpener: tools to build up</h1>
 <p><strong>The problem.</strong> I&#x27;ve been hooked on software since AOL, when I found out you could download new programs that did new things. And every time a computer crashed, I wanted one click that would reopen every app and put each one back exactly where I had it.</p>
 <p><strong>What I built.</strong> Programming had always been a hobby. I taught myself to program my graphing calculator from its manual, but applications on a PC were out of reach. When LLMs arrived, at the right moment in my life, I taught myself Python, and this was the first project: every piece I needed to take control of my desktop. Open apps, place them, do it again reliably, save the list, open several lists at once.</p>
 <p>Every time I hit something I couldn&#x27;t do, I built the tool for it, and each one became part of DesktopOpener. I needed to measure pixel distances on screen, so I built my own ruler. I needed a better color picker, so I built ColorCatcher. I wanted to search the text in my repos and gather stats on my own work, so I built FancySearch. I needed to know more about the desktop environment itself, so I built the Environment Probe. And I wanted a control panel with shortcuts to the tools I use most. I got fascinated by Python&#x27;s live console, built my own, and started on a way to multiplex running scripts. The background workers I imagined never arrived, but many of the apps now run quietly from the system tray.</p>

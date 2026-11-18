@@ -386,6 +386,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   main.post-wrap { max-width: 78ch; padding-top: 28px; padding-bottom: 24px; }
   .post { padding: 22px 24px; }
   .post h1 { margin: 0 0 16px; line-height: 1.15; }
+  .icon { width: 1.4em; height: 1.4em; object-fit: contain; vertical-align: -0.3em; margin-right: 0.4em; flex: none; align-self: center; }
   .post p, .post li { line-height: 1.65; }
   .post-kicker { margin: 0 0 8px; font-size: 0.9rem; }
   .post-list { line-height: 1.9; padding-left: 1.4em; }
@@ -416,7 +417,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 <main class="wrap post-wrap">
 <article class="post box">
 <p class="post-kicker"><a href="./">Posts</a></p>
-<h1>gitSpecOps: special Git operations</h1>
+<h1><img class="icon" src="../assets/icons/gitspecops.svg" alt="" width="24" height="24" loading="lazy">gitSpecOps: special Git operations</h1>
 <p><strong>The problem.</strong> I had a reason to migrate a whole GitHub organization: 50 repositories into a new one. Nobody should do that by hand.</p>
 <p><strong>What I built.</strong> An organization duplicator: it pulled each repository to my machine, then pushed it to an identically named repository in the new organization. Then I added special operations one or two at a time. As my fleet of machines grew and I worked on projects across them, I wanted to see the sync state of every repository on every machine at once, so I built the sync suggester. Every operation shows its plan before it acts and refuses anything ambiguous.</p>
 <p><strong>Where it stands.</strong> The Windows command-line tools work. The GUI, Linux and macOS support, and testing across a real fleet are unfinished.</p>
