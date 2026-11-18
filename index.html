@@ -566,7 +566,9 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   /* Open cards: everything a reader needs is on the card; no inspector. */
   .card { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; }
   .card .name { margin: 0; font-size: 1.25rem; line-height: 1.2; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
-  .card .name .icon { margin-right: 0; }
+  .card .name .icon { margin-right: 0; flex: none; align-self: flex-start; margin-top: 0.05em; }
+  /* A long title wraps beside its icon, never below it (2026-11-17: the Save Saver card). */
+  .card .name > .title-link, .card .name > span[data-themed] { flex: 1 1 0; min-width: 0; }
   .card .name .badges { margin-left: auto; display: inline-flex; flex-wrap: wrap; gap: 4px; font-size: 0.8rem; font-weight: 600; }
   .card .sub { margin: 0; }
   .card .facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; margin: 4px 0 0; font-size: 0.92rem; }
@@ -703,13 +705,13 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 </article>
 <article class="thing box card kit" id="mount-diablo-advisors" data-thing data-rel="" data-story style="--c: var(--warm)">
 <div class="face">
-<h3 class="name"><span data-themed="Mount Diablo Advisors" data-plain="Mount Diablo Advisors">Mount Diablo Advisors</span><span class="badges"><span class="st op">Closed</span></span></h3>
+<h3 class="name"><img class="icon" src="assets/icons/mount-diablo-advisors.png" alt="" width="24" height="24" loading="lazy"><span data-themed="Mount Diablo Advisors" data-plain="Mount Diablo Advisors">Mount Diablo Advisors</span><span class="badges"><span class="st op">Closed</span></span></h3>
 <p class="sub">Started to do handshake private-equity deals when a partner&#x27;s PE firm passed on them.</p>
 <dl class="facts"><dt>Role</dt><dd>Co-founder, 2011. Formed the company, and later closed it down and filed its taxes.</dd><dt>Built</dt><dd>A basic website over one summer, more than the splash page there now. Since then, a personal finance tool behind it: account aggregation, net worth, and a review of my options positions with an AI that works from a structured knowledge library.</dd><dt>Details</dt><dd>The advisory side stopped after that summer. The finance tool has most of its backend; the live brokerage connection and its security work come next.</dd></dl>
 <p class="links"><a class="story-toggle" href="posts/mount-diablo-advisors.html">About</a></p>
 </div>
 <div class="story" hidden>
-<h3 class="name">Mount Diablo Advisors</h3>
+<h3 class="name"><img class="icon" src="assets/icons/mount-diablo-advisors.png" alt="" width="24" height="24" loading="lazy">Mount Diablo Advisors</h3>
 <p><strong>The problem.</strong> A friend and roommate had just started at a private-equity firm. The firm passed on deals all the time, and we thought those deals deserved a second look: we could take them and shop them to other PE firms.</p>
 <p><strong>What I built.</strong> The company, formed through LegalZoom, my first time starting one. Over one summer we built the website and started an outreach and networking plan.</p>
 <p><strong>What happened.</strong> My roommate took another job and moved, and we had to stop. I took responsibility for closing the company down and filing its taxes, and I kept the domain. Since then I&#x27;ve been building a personal finance tool behind it: account aggregation, net worth, and a review of my options positions with an AI that works from a structured knowledge library. It has most of its backend; the live brokerage connection and its security work come next.</p>
@@ -757,13 +759,13 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
 </article>
 <article class="thing box card kit" id="training-studio" data-thing data-rel="" data-story style="--c: var(--go)">
 <div class="face">
-<h3 class="name"><span data-themed="Training Studio" data-plain="Training Studio">Training Studio</span></h3>
+<h3 class="name"><img class="icon" src="assets/icons/true-bots.svg" alt="" width="24" height="24" loading="lazy"><span data-themed="Training Studio" data-plain="Training Studio">Training Studio</span></h3>
 <p class="sub">The desktop control panel True Bots&#x27; ML engineers ran their training on.</p>
 <dl class="facts"><dt>Built</dt><dd>Sole author, 21,000 lines: live YAML config interface, environment builder, four-category machine validation, run launch and live monitoring. The config validation schema is derived from the upstream source by AST parsing, so it follows new versions instead of drifting. Designed for an agent to drive the training loop later.</dd><dt>Stack</dt><dd>Python, Unity ML-Agents</dd><dt>Details</dt><dd>2024 to 2025; used by a team of three.</dd></dl>
 <p class="links"><a class="story-toggle" href="posts/training-studio.html">About</a></p>
 </div>
 <div class="story" hidden>
-<h3 class="name">Training Studio: the control panel True Bots trained on</h3>
+<h3 class="name"><img class="icon" src="assets/icons/true-bots.svg" alt="" width="24" height="24" loading="lazy">Training Studio: the control panel True Bots trained on</h3>
 <p><strong>The problem.</strong> While training ML agents, we kept going back to the command line and typing long strings of parameter-rich flags. It was really slowing us down, but it was all programmatic.</p>
 <p><strong>What I built.</strong> A GUI that works directly with the YAML configs, and a way to drive the launch controls that is more intuitive, repeatable and, most importantly, automatable. It came to 21,000 lines that I hand-rolled piece by piece:</p>
 <ul>
